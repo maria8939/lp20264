@@ -41,8 +41,8 @@ def q06():
 
     num1 = int(input('digite o primeiro numero inteiro: '))
     num2 = int (input('digite o primeiro numero inteiro: '))
-  print (antecessor)
-  print (sucessor)
+  #print (antecessor)
+  #print (sucessor)
 
 
 #7. Faça um programa que leia o nome o endereço e o telefone de
@@ -51,25 +51,51 @@ def q07():
      nome= input ('nome: ')
      endereço= input ('endereço: ')
      telefone= input ('telefone: ')
-     texto= f ' ' ' 
+   # texto= f ' ' ' 
 
 #8. Faça um programa que leia dois números inteiros e imprima a
 #   subtração deles.
+def q08():
+     num1= int(input('num1: '))
+     num2= int(input('num2: '))
+     print (f' {num1} - {num2} = {num1 - num2}')
+
 
 #9. Faça um programa que leia um número real e imprima ¼ deste número.
-
+def q09():
+     x= float(input('digite o numero real'))
+     x= x/4 
+     print (f'o resultado è: {x}') 
 #10. Faça um programa que leia três números reais e calcule a
 #    média aritmética destes números. Ao final, o programa deve
 #    imprimir o resultado do cálculo.
+def q11():
+  num1 = float(input('núm1: '))
+  num2 = float(input('num2: '))
+  print(f'{num1} + {num2} = {num1 + num2}')
+  print(f'{num1} - {num2} = {num1 + num2}')
+  print(f'{num1} * {num2} = {num1 + num2}')
+  print(f'{num1} - {num2} = {num1 + num2}')
+    
 
 #11. Faça um programa que leia dois números reais e calcule as
 #    quatro operações básicas entre estes dois números, adição,
 #    subtração,multiplicação e divisão. Ao final, o programa
 #    deve imprimir os resultados dos cálculos.
-
+def q11():
+    num1 = float(input('1 Número: '))
+    num2 = float(input('2 Número: '))
+    print(f'{num1}+{num2} = {num1+num2}')
+    print(f'{num1}-{num2} = {num1-num2}')
+    print(f'{num1}*{num2} = {num1*num2}')
+    print(f'{num1}/{num2} = {num1/num2}')
+q11()
 #12. Faça um programa que leia um número real e calcule o
 #    quadrado deste número. Ao final, o programa deve
 #    imprimir o resultado do cálculo.
+  def q12():
+    num= float(input)
+
 
 #13. Faça um programa que leia o saldo de uma conta poupança e
 #    imprima o novo saldo, considerando um reajuste de 2%.
