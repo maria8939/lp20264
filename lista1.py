@@ -15,10 +15,11 @@ def q02():
 
 #3. Faça um programa que imprima a média aritmética entre os números 5, 8, 12.
 def q03():
-
+#try:
     media = (5 + 8 + 12) / 3 
-
+#except:
     print (media)
+    
  
 
 #4. Faça um programa que leia e imprima um número inteiro.
@@ -93,30 +94,70 @@ q11()
 #12. Faça um programa que leia um número real e calcule o
 #    quadrado deste número. Ao final, o programa deve
 #    imprimir o resultado do cálculo.
-  def q12():
-    num= float(input)
+def q12():
+    num= float(input('digite um numero real:'))
+    print(f'')
 
 
 #13. Faça um programa que leia o saldo de uma conta poupança e
 #    imprima o novo saldo, considerando um reajuste de 2%.
+def q13(): 
+  saldo = float(input('digite o saldo da conta: R$'))
+  saldo = round(saldo,2)
+  print(f'Saldo de R$ {saldo:2f} + 2% = R$ {saldo*1.02}')
 
+  q013()
 #14. Faça um programa que leia a base e a altura de um retângulo
-#    e imprima o perímetro (base*2 + altura*2) e a área (base * altura).    
+#    e imprima o perímetro (base*2 + altura*2) e a área (base * altura).
+def  q14():
+
+     base = float(input("Digite a base do retângulo: "))
+     altura = float(input("Digite a altura do retângulo: "))
+
+     perimetro = base * 2 + altura * 2
+     area = base * altura
+
+     print("Perímetro:", perimetro)
+     print("Área:", area)
+
 
 #15. Faça um programa que leia o valor de um produto, o percentual
 #    do desconto desejado e imprima o valor do desconto e o valor
 #    do produto subtraindo o desconto.
+def q15():
+     valor = float(input("Digite o valor do produto: "))
+     percentual = float(input("Digite o percentual de desconto (%): "))
+     desconto = valor * percentual / 100
+     valor_final = valor - desconto
+     print("Valor do desconto:", desconto)
+     print("Valor do produto com desconto:", valor_final)
 
 #16. Faça um programa que calcule o reajuste do salário de um
 #    funcionário. Para isso, o programa deverá ler o salário atual
 #    do funcionário e ler o percentual de reajuste. Ao final imprimir
-#    o valor do novo salário.
+#    o valor do novo salário
+def q16():
+     salario_atual = float(input ("digite o salario atual "))
+     porcentual = float(input (" digite o percentual (%) "))
+
+     reajuste = salario_atual * (porcentual / 100)
+     novo_salario = salario_atual + reajuste 
+
+     print= (f" novo salario: r$ {novo_salario}")
+     
 
 #17. Faça um programa que calcule a conversão entre graus centígrados
 #    e Fahrenheit. Para isso, leia o valor em centígrados e calcule
 #    com base na fórmula a seguir. Após calcular o programa deve
 #    imprimir o resultado da conversão.
 #    F = (9 x C + 160) / 5
+def q17():
+     celsius = float(input("digite a temperatura em graus celsius: "))
+     fahrenheit = (9 * celsius + 160) / 5 
+
+     print(f" temperatura em fahrenheit: {fahrenheit:.2f} f")
+     
+
 
 #18. Faça um programa que calcule a quantidade de litros de combustível
 #    consumidos em uma viagem, sabendo-se que o carro tem autonomia de
@@ -130,8 +171,19 @@ q11()
 #    • L = Litros de combustível consumidos
 #    Ao final, o programa deverá imprimir a distância percorrida e a
 #    quantidade de litros consumidos na viagem.
+def q18():
 
-#19. Faça um programa que calcule o valor de uma prestação em atraso.
+     tempo = float(input("digite o tempo da viagem (em horas):  "))
+     velocidade= float(input("digite a velocidade da viagem (hm/h): "))
+
+     distancia = tempo * velocidade
+    
+     litro = distancia / 12
+     
+    # print(f"distancia percorrida: {distancia: km")
+     #print(f"Combustível consumido: {litro: litros")
+
+19. #Faça um programa que calcule o valor de uma prestação em atraso.
 #    Para isso, o programa deve ler o valor da prestação vencida, a
 #    taxa periódica de juros e o período de atraso. Ao final, o
 #    programa deve imprimir o valor da prestação atrasada, o período
@@ -141,3 +193,6 @@ q11()
 #20. Faça um programa que efetue a apresentação do valor da conversão
 #    em real (R$) de um valor lido em dólar (US$). Para isso, será
 #    necessário também ler o valor da cotação do dólar.
+
+questao = input('Digite a questão a ser executada: ')
+eval(f'q{questao}()')  # eval transforma uma string (texto) em comando python
